@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
+import React, { Component } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import * as actions from "../actions";
 
-import Header from './Header';
-import Landing from './Landing';
-import Dashboard from './Dashboard';
-import BlogNew from './blogs/BlogNew';
-import BlogShow from './blogs/BlogShow';
+import Header from "./Header";
+import Landing from "./Landing";
+import Dashboard from "./Dashboard";
+import BlogNew from "./blogs/BlogNew";
+import BlogShow from "./blogs/BlogShow";
 
 class App extends Component {
   componentDidMount() {
@@ -33,4 +33,9 @@ class App extends Component {
   }
 }
 
-export default connect(null, actions)(App);
+const mapStateToProps = (state) => {
+  console.log("state", state);
+  return state;
+};
+
+export default connect(mapStateToProps, actions)(App);
