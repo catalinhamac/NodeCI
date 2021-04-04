@@ -1,4 +1,6 @@
-export default [
-  { label: 'Blog Title', name: 'title' },
-  { label: 'Content', name: 'content' }
+const formFields = [
+  { label: "Blog Title", name: "title" },
+  { label: "Content", name: "content" },
 ];
+
+export default formFields;
